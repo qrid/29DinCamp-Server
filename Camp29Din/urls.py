@@ -20,5 +20,5 @@ from main.views import LetterAPI
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
-    path('post/', LetterAPI.as_view())
+    path('letter/', LetterAPI.as_view())
 ]

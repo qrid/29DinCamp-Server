@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    이규진 인편 보내기 TheCamp
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        이규진 인편 보내기 TheCamp
+        <form action="letter/" method="post" target="iframe">{% csrf_token %}
+            <p>보내는 사람 : <input id='sender' type = "text" name="sender"></p>
+            <p>제목 : <input id='subject' type = "text" name="subject"></p>
+            <p>내용 : <input id='content' type = "text" name="content"></p>
+            <input type = "submit" value="전송">
+        </form>
+    </body>
+    <iframe id="iframe" name="iframe" style="display:none"></iframe>
 </html>
