@@ -1,0 +1,4 @@
+uuid
+django
+djangorestframework
+thecampy
