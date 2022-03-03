@@ -6,10 +6,11 @@
     </head>
     <body>
         이규진 인편 보내기 TheCamp
-        <form action="letter/" method="post" target="iframe">{% csrf_token %}
+        <form action="letter/" method="post" enctype="multipart/form-data" target="iframe">{% csrf_token %}
             <p>보내는 사람 : <input id='sender' type = "text" name="sender"></p>
             <p>제목 : <input id='subject' type = "text" name="subject"></p>
             <p>내용 : <input id='content' type = "text" name="content"></p>
+            <p>사진 : <input id='image' type="file" name="image"></p>
             <input type = "submit" value="전송">
         </form>
     </body>

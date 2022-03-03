@@ -1,4 +1,5 @@
 import thecampy
+from Camp29Din import settings
 
 soldier = thecampy.Soldier(
     '이규진',
@@ -6,6 +7,7 @@ soldier = thecampy.Soldier(
     2022_04_11,
     '육군훈련소'
 )
+
 
 def letter_build(letter):
     title, content = letter.get_header(), letter.content
@@ -32,18 +34,21 @@ def send(letter):
         # 메제지 개체 작성
         msg = thecampy.Message(title, content)
 
+        # 이미지 개체 작성
+        image = thecampy.ThecampyImage("/".join([settings.MEDIA_ROOT, letter.image]).replace('\\', '/'))
+
         # 내 계정 가져오기
         thecamp_client = thecampy.Client('rbwls5567@naver.com', 'rbwls&*79&*79')
 
         # 내 계정으로 나에게 메세지 개체 보내기
-        send_result = thecamp_client.send_message(soldier, msg)
+        send_result = thecamp_client.send_message(soldier, msg, image)
 
         # 전송 결과를 저장하기
         letter.sent = send_result
         print("전송했습니다.")
         return True
 
-    except Exception as p:
+    except Exception:
         print("전송 실패했습니다.")
         return False
 
