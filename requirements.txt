@@ -2,3 +2,4 @@ uuid
 django
 djangorestframework
 thecampy
+pillow
