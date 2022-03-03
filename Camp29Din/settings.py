@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-a^(udh-8ccyuwtad&4-0=4uu)gi-ufw39@+hdcb8tatl*q-o6l
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'https://thecampsender.herokuapp.com/',
+    '*',
 ]
 
 # Application definition
