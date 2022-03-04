@@ -11,6 +11,14 @@ def index(request):
     return render(request, 'main/index.html')
 
 
+class PingAPI(APIView):
+    def get(self, *args, **kwargs):
+        return Response(
+            {'ping': 'pong'}
+            , status=200
+        )
+
+
 class LetterAPI(APIView):
     def post(self, request):
         serializer = LetterSerializer(data=request.data)

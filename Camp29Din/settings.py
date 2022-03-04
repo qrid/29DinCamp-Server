@@ -79,10 +79,14 @@ WSGI_APPLICATION = 'Camp29Din.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'rbwls5567$default',
+        'USER': 'rbwls5567',
+        'PASSWORD': 'rbwls&*79&*79',
+        'HOST': 'rbwls5567.mysql.pythonanywhere-services.com',
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

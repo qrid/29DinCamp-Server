@@ -31,5 +31,5 @@ class Letter(models.Model):
         return self.sender + ': ' + self.subject
 
     @classmethod
-    def create(cls, sender, subject, content):
-        return cls(sender=sender, subject=subject, content=content)
+    def create(cls, sender, subject, content, image):
+        return cls(sender=sender, subject=subject, content=content, image=image)
